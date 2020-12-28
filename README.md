@@ -1,2 +1,2 @@
-# Registration and Login form
- A simple login and registration form
+# Formulario de registro e login
+Um simples formulário de login e registro.
