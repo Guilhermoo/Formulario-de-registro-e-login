@@ -11,20 +11,44 @@
         <div class="caixa container">
             <div class="caixa-button">
                 <div id="button"></div>
-                <button type="button" class="apertar-button">ENTRAR</button>
-                <button type="button" class="apertar-button">REGISTRAR</button>
+                <button type="button" class="apertar-button" onclick="login()">ENTRAR</button>
+                <button type="button" class="apertar-button" onclick="registro()">REGISTRAR</button>
             </div>
             <div class="social">
                 <img src="https://img.icons8.com/nolan/64/facebook-new.png"/>
                 <img src="https://img.icons8.com/nolan/64/twitter.png"/>
             </div>
-            <form class="form-grupo">
+            <form id="login" class="form-grupo">
                 <input type="text" class="campo-input" placeholder="Usuario" required>
                 <input type="password" class="campo-input" placeholder="Senha" required>
                 <input type="checkbox" class="check-box"><span>Lembrar senha</span>
                 <button type="submit" class="enviar-btn">Entrar</button>
             </form>
+            <form id="registro" class="form-grupo">
+                <input type="text" class="campo-input" placeholder="Usuario" required>
+                <input type="email" class="campo-input" placeholder="Email" required>
+                <input type="password" class="campo-input" placeholder="Senha" required>
+                <input type="checkbox" class="check-box"><span>Concordo com os termos</span>
+                <button type="submit" class="enviar-btn">Registrar</button>
+            </form>
         </div>
     </section>
+    <script>
+        var log = document.getElementById('login')
+        var reg = document.getElementById('registro')
+        var btn = document.getElementById('button')
+
+        function registro() {
+            log.style.left = "-400px"
+            reg.style.left = "5px"
+            btn.style.left = "132px"
+        }
+        
+        function login() {
+            log.style.left = "5px"
+            reg.style.left ="400px"
+            btn.style.left ="-0px"
+        }
+    </script>
 </body>
 </html>
