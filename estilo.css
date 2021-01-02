@@ -111,3 +111,32 @@ span {
 #registro {
     left: 405px;
 }
+
+#tela {
+    width: 380px;
+    height: 480px;
+    position: absolute;
+    top: 0vh;
+    left: 50vh;
+    margin: 6% auto;
+    background-color: aliceblue;
+    padding: 5px;
+    color: violet;
+    overflow: hidden;
+    z-index: -1;
+}
+#tela h1 {
+    position: relative;
+    top: 10vh;
+    left: 13vh;
+}
+#tela h1:nth-child(3) {
+    position: relative;
+    top: 32vh;
+    left: 10vh;
+}
+#tela h2 { 
+    position: relative;
+    top: 20vh;
+    left: 18vh;
+}

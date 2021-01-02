@@ -4,11 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="estilo.css">
+    <script src="script.js" defer></script>
     <title>Login</title>
 </head>
 <body>
     <section id="principal">
-        <div class="caixa container">
+        <div id="caixa" class="caixa container">
             <div class="caixa-button">
                 <div id="button"></div>
                 <button type="button" class="apertar-button" onclick="login()">ENTRAR</button>
@@ -19,10 +20,10 @@
                 <img src="https://img.icons8.com/nolan/64/twitter.png"/>
             </div>
             <form id="login" class="form-grupo">
-                <input type="text" class="campo-input" placeholder="Usuario" required>
-                <input type="password" class="campo-input" placeholder="Senha" required>
+                <input id="nome"oninput="telaIniciada()" type="text" class="campo-input" placeholder="Usuario">
+                <input type="password" class="campo-input" placeholder="Senha">
                 <input type="checkbox" class="check-box"><span>Lembrar senha</span>
-                <button type="submit" class="enviar-btn">Entrar</button>
+                <button onclick="telaTroca()" type="submit"  class="enviar-btn">Entrar</button>
             </form>
             <form id="registro" class="form-grupo">
                 <input type="text" class="campo-input" placeholder="Usuario" required>
@@ -32,23 +33,11 @@
                 <button type="submit" class="enviar-btn">Registrar</button>
             </form>
         </div>
+        <div id="tela">
+            <h1>Seja bem vindo!</h1>
+            <h2>NOME</h2>
+            <h1>Login feito com sucesso!</h1>
+        </div>
     </section>
-    <script>
-        var log = document.getElementById('login')
-        var reg = document.getElementById('registro')
-        var btn = document.getElementById('button')
-
-        function registro() {
-            log.style.left = "-400px"
-            reg.style.left = "5px"
-            btn.style.left = "132px"
-        }
-        
-        function login() {
-            log.style.left = "5px"
-            reg.style.left ="400px"
-            btn.style.left ="-0px"
-        }
-    </script>
 </body>
 </html>
